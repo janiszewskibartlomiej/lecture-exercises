@@ -20,58 +20,77 @@
     <h1>Dość złożony formularz</h1>
 
     <form>
-        <div>
-            <label for="input-name"> Imię </label>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label class="form-label" for="input-name"> Imię </label>
 
-            <input id="input-name" placeholder="Jan"/>
-        </div>
+                <input class="form-control" id="input-name" placeholder="Jan" type="text"/>
+            </div>
 
-        <div>
-            <label for="input-surname"> Nazwisko </label>
+            <div class="col-md-6">
+                <label class="form-label" for="input-surname"> Nazwisko </label>
 
-            <input id="input-surname" placeholder="Kowalski"/>
-        </div>
-
-        <div>
-            <label for="input-email"> Email </label>
-
-            <input type="email" id="input-email"/>
-        </div>
-
-        <div>
-            <label for="input-password"> Hasło </label>
-
-            <input minlength="8" id="input-password"/>
-        </div>
-
-        <div>
-            <label for="input-address"> Ulica </label>
-
-            <input id="input-address" placeholder="Grunwaldzka"/>
-        </div>
-
-        <div>
-            <label for="input-postal-code"> Kod pocztowy </label>
-
-            <input id="input-postal-code" placeholder="00-000"/>
-        </div>
-
-        <div>
-            <label for="input-city"> Miejscowość </label>
-
-            <input id="input-city" placeholder="Gdańsk" required/>
-        </div>
-
-        <div>
-            <div>
-                <input type="checkbox" id="check-terms"/>
-
-                <label for="check-terms"> Akceptuję regulamin </label>
+                <input class="form-control" id="input-surname" placeholder="Kowalski" type="text"/>
             </div>
         </div>
 
-        <div>
-            <button type="submit">Zarejestruj się</button>
+        <div class="mt-3">
+            <label class="form-label" for="input-email"> Email </label>
+
+            <input class="form-control" id="input-email" type="email"/>
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label" for="input-password"> Hasło </label>
+
+            <input class="form-control" id="input-password" minlength="8" type="password"/>
+            <div class="form-text" id="password-help">Hasło musi się składać z conajmniej 8 znaków.</div>
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label" for="input-address"> Ulica </label>
+
+            <input class="form-control" id="input-address" placeholder="Grunwaldzka" type="text"/>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label class="form-label" for="input-postal-code-first-part"> Kod pocztowy </label>
+                <div class="input-group">
+                    <input aria-describedby="basic-mark"
+                           aria-label="00"
+                           class="form-control"
+                           id="input-postal-code-first-part"
+                           placeholder="00"
+                           type="number"/>
+                    <span class="input-group-text" id="basic-mark">-</span>
+                    <input aria-describedby="basic-mark"
+                           aria-label="000"
+                           class="form-control"
+                           id="input-postal-code-second-part"
+                           placeholder="000"
+                           type="number"/>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label" for="input-city"> Miejscowość </label>
+
+                <input class="form-control" id="input-city" placeholder="Gdańsk" required type="text"/>
+            </div>
+        </div>
+
+
+        <div class="mt-3">
+            <div class="form-check">
+                <input class="form-check-input" id="check-terms" type="checkbox"/>
+
+                <label class="form-check-label" for="check-terms"> Akceptuję regulamin </label>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <button class="btn btn-primary float-end" type="submit">Zarejestruj się</button>
         </div>
     </form>
 </div>
@@ -88,7 +107,7 @@
         "use strict";
 
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll(".needs-validation");
+        const forms = document.querySelectorAll(".needs-validation");
 
         // Loop over them and prevent submission
         Array.prototype.slice.call(forms).forEach(function (form) {

@@ -65,116 +65,116 @@ Inne przeglądarki:
 ```html
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous"
     />
 
     <title>Formularz</title>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <h1>Dość złożony formularz</h1>
+<body>
+<div class="container">
+    <h1>Dość złożony formularz</h1>
 
-      <form>
+    <form>
         <div>
-          <label for="input-name"> Imię </label>
+            <label for="input-name"> Imię </label>
 
-          <input id="input-name" placeholder="Jan" />
+            <input id="input-name" placeholder="Jan"/>
         </div>
 
         <div>
-          <label for="input-surname"> Nazwisko </label>
+            <label for="input-surname"> Nazwisko </label>
 
-          <input id="input-surname" placeholder="Kowalski" />
+            <input id="input-surname" placeholder="Kowalski"/>
         </div>
 
         <div>
-          <label for="input-email"> Email </label>
+            <label for="input-email"> Email </label>
 
-          <input type="email" id="input-email" />
+            <input type="email" id="input-email"/>
         </div>
 
         <div>
-          <label for="input-password"> Hasło </label>
+            <label for="input-password"> Hasło </label>
 
-          <input minlength="8" id="input-password" />
+            <input minlength="8" id="input-password"/>
         </div>
 
         <div>
-          <label for="input-address"> Ulica </label>
+            <label for="input-address"> Ulica </label>
 
-          <input id="input-address" placeholder="Grunwaldzka" />
+            <input id="input-address" placeholder="Grunwaldzka"/>
         </div>
 
         <div>
-          <label for="input-postal-code"> Kod pocztowy </label>
+            <label for="input-postal-code"> Kod pocztowy </label>
 
-          <input id="input-postal-code" placeholder="00-000" />
+            <input id="input-postal-code" placeholder="00-000"/>
         </div>
 
         <div>
-          <label for="input-city"> Miejscowość </label>
+            <label for="input-city"> Miejscowość </label>
 
-          <input id="input-city" placeholder="Gdańsk" required />
+            <input id="input-city" placeholder="Gdańsk" required/>
         </div>
 
         <div>
-          <div>
-            <input type="checkbox" id="check-terms" />
+            <div>
+                <input type="checkbox" id="check-terms"/>
 
-            <label for="check-terms"> Akceptuję regulamin </label>
-          </div>
+                <label for="check-terms"> Akceptuję regulamin </label>
+            </div>
         </div>
 
         <div>
-          <button type="submit">Zarejestruj się</button>
+            <button type="submit">Zarejestruj się</button>
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
-    ></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"
+></script>
 
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function () {
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
         "use strict";
 
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll(".needs-validation");
+        const forms = document.querySelectorAll(".needs-validation");
 
         // Loop over them and prevent submission
         Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener(
-            "submit",
-            function (event) {
-              event.preventDefault();
-              event.stopPropagation();
+            form.addEventListener(
+                    "submit",
+                    function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
 
-              if (form.checkValidity()) {
-                alert("Gratulacje – ten formularz wygląda dobrze :)");
-              }
+                        if (form.checkValidity()) {
+                            alert("Gratulacje – ten formularz wygląda dobrze :)");
+                        }
 
-              form.classList.add("was-validated");
-            },
-            false
-          );
+                        form.classList.add("was-validated");
+                    },
+                    false
+            );
         });
-      })();
-    </script>
-  </body>
+    })();
+</script>
+</body>
 </html>
 ```
 
